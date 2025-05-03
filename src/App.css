@@ -1,0 +1,104 @@
+/* Reset some default styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Main app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Header */
+.app-header {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #00ffd5;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+/* Card-style boxes for webcam/image */
+.card {
+  background-color: #1e2a38;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 100%; /* Remove the 700px limit */
+  animation: fadeIn 1s ease;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Upload button and input */
+input[type="file"], button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+input[type="file"]:hover, button:hover {
+  background-color: #02e0bf;
+}
+
+/* Image and canvas */
+.image-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.image-wrapper canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
